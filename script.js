@@ -30,7 +30,9 @@ class VotingComponent extends HTMLElement {
         wrapper.appendChild(voteCount)
     }
 
-    vote = () => this.shadowRoot.getElementById("vote_count").innerText = ++this.votes
+    vote() {
+        this.shadowRoot.getElementById("vote_count").innerText = ++this.votes
+    }
 }
 
 customElements.define("voting-component", VotingComponent)
